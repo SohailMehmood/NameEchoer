@@ -1,4 +1,4 @@
-# ConsoleApp2
+# NameEchoer
 
 Task 2: Greet user with their name.
 
