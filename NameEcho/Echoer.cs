@@ -21,10 +21,7 @@ namespace NameEchoer
 
             return $"Hello {name}";
         }
-    }
 
-    public class EchoerAB
-    {
         public string EchoNameAB()
         {
             Console.WriteLine("Please enter your name");

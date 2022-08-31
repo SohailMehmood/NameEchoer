@@ -7,8 +7,17 @@ namespace Names
     {
         public static void Main(string[] args)
         {
-            Echoer echoer = new Echoer();
-            EchoerAB echoerAB = new EchoerAB();
+            if (args is null)
+            {
+                throw new ArgumentNullException(nameof(args));
+            }
+
+            Echoer echoer = new();
+
+            List<string> list = new List<string>();
+            list.Add("Program 1: Greets user by the provided name.");
+            list.Add("Program 2: Only greets users whose name is either Bob or Alice");
+            list.ForEach(Console.WriteLine);
 
             Console.WriteLine("Enter a program number");
             string program = Console.ReadLine() ?? string.Empty;
@@ -21,7 +30,7 @@ namespace Names
                     break;
 
                 case "2":
-                    string echoedAB = echoerAB.EchoNameAB();
+                    string echoedAB = echoer.EchoNameAB();
                     Console.WriteLine(echoedAB);
                     break;
 
