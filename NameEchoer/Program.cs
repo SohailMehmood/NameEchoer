@@ -14,9 +14,11 @@ namespace Names
 
             Echoer echoer = new();
 
-            List<string> list = new List<string>();
-            list.Add("Program 1: Greets user by the provided name.");
-            list.Add("Program 2: Only greets users whose name is either Bob or Alice");
+            List<string> list = new()
+            {
+                "Program 1: Greets user by the provided name.",
+                "Program 2: Only greets users whose name is either Bob or Alice"
+            };
             list.ForEach(Console.WriteLine);
 
             Console.WriteLine("Enter a program number");
